@@ -11,8 +11,9 @@ function reverseNum(n) {
 
   let reversed = "";
   const isNeg = n < 0;
-  if(isNeg){
-    n = Math.abs(n)
+  
+  if (isNeg) {
+    n = Math.abs(n);
   }
 
   while (n != 0) {
