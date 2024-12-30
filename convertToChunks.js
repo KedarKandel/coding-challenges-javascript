@@ -5,7 +5,6 @@
 //  function should take the string and a constant which will determine the maximum length of the chunk. The space between the words should be as usual.
 //  if function("helloWorld", 4), function should return helloworld because you cannot split the word.
 
-
 // method 1
 const msg1 = "A quick brown fox jumps over the lazy dog";
 
@@ -30,9 +29,6 @@ const convertToChunks = (msg1, n) => {
 
 // console.log(convertToChunks(msg1, 10));
 
-
-
-
 // 2. Method 2 using recusrion
 
 const msg = "A quick brown fox jumps over the lazy dog";
@@ -46,6 +42,7 @@ const convertToChunksDFS = (msg, n, currentChunk = "", chunks = []) => {
   }
 
   const words = msg.split(" ");
+  
   const [firstWord, ...remainingWords] = words;
 
   if (currentChunk.length + firstWord.length + 1 <= n) {
