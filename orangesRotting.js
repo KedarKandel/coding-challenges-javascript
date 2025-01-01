@@ -28,8 +28,8 @@ function orangesRotting(grid) {
     for (let i = 0; i < size; i++) {
       const [x, y] = queue.shift();
       for (const [dx, dy] of directions) {
-        const nx = x + dx,
-          ny = y + dy;
+        const nx = x + dx;
+        const ny = y + dy;
         if (
           nx >= 0 &&
           ny >= 0 &&
@@ -45,7 +45,7 @@ function orangesRotting(grid) {
     }
     minutes++;
   }
-console.log(queue)
+  console.log(queue);
   return fresh === 0 ? minutes : -1;
 }
 
