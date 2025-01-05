@@ -14,6 +14,8 @@ function maxChar(s) {
   let maxCount = 0;
   const result = [];
 
+  // for(let key in charObj){}
+
   for (const [key, value] of Object.entries(charObj)) {
     if (value > maxCount) {
       maxCount = value;
@@ -27,4 +29,4 @@ function maxChar(s) {
   return result.length === 1 ? result[0] : result;
 }
 
-console.log(maxChar("keddrrss"));
+console.log(maxChar("keddrrss 33334545455555555"));
