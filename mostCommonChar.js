@@ -1,24 +1,30 @@
-// Given a string, return the most commonly used character.
+// Given a string, return the most commonly used character. If there are more than one characters with equal frequencies, return all of them.
 
 // keddddaarr = d ==>3
+//keddrrss= d,r,s
 
 function maxChar(s) {
   let str = s.toLowerCase().replace(/[^a-z0-9]/g, "");
-  let obj = {};
+  let charObj = {};
 
   for (let char of str) {
-    obj[char] = (obj[char] || 0) + 1;
+    charObj[char] = (charObj[char] || 0) + 1;
   }
 
   let maxCount = 0;
-  let maxChar = "";
-  for (let key in obj) {
-    if (obj[key] > maxCount) {
-      maxCount = obj[key];
-      maxChar = key;
+  const result = [];
+
+  for (const [key, value] of Object.entries(charObj)) {
+    if (value > maxCount) {
+      maxCount = value;
+      result.length = 0;
+      result.push(key);
+    } else if (value === maxCount) {
+      result.push(key);
     }
   }
-  return maxChar;
+
+  return result.length === 1 ? result[0] : result;
 }
 
-console.log(maxChar("kedddddrr"));
+console.log(maxChar("keddrrss"));
