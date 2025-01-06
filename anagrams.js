@@ -4,7 +4,7 @@
 // anagrams("hi","there"),("bye","there") ==> false
 
 function charMapFunc(str) {
-  str = str.toLowerCase().replace(/[^a-zA-Z0-9]/gi, "");
+  str = str.toLowerCase().replace(/[^a-zA-Z0-9]/g, "");
   const charMap = {};
   for (let char of str) {
     charMap[char] = (charMap[char] || 0) + 1;
