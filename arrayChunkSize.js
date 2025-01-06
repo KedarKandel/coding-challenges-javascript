@@ -5,6 +5,7 @@
 
 const chunkArray = (arr, size) => {
   const result = [];
+
   for (let i = 0; i < arr.length; i += size) {
     let chunk = [];
     for (j = i; j < i + size && j < arr.length; j++) {
@@ -16,7 +17,7 @@ const chunkArray = (arr, size) => {
   return result;
 };
 
-//console.log(chunkArray([1, 2, 3, 4, 5, 6], 2));
+console.log(chunkArray([1, 2, 3, 4, 5, 6], 2));
 
 function makeChunk(arr, size) {
   const res = [];
@@ -26,8 +27,7 @@ function makeChunk(arr, size) {
     let chunk = arr.slice(startIndex, startIndex + size);
     res.push(chunk);
     startIndex += size;
-   
   }
   return res;
 }
-console.log(makeChunk([1, 2, 3, 4, 5, 6], 2));
+// console.log(makeChunk([1, 2, 3, 4, 5, 6], 2));
