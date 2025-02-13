@@ -36,6 +36,7 @@ function printPyramid(n) {
 
         console.log(spaces + stars);
     }
+  
 }
 
 printPyramid(5);
