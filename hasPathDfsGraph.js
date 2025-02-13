@@ -11,16 +11,16 @@ const graph = {
 };
 
 function hasPath(graph, src, dest) {
-  if (src === dest) return true;
-
-  for (neighbor of graph[src]) {
-    if (hasPath(graph, neighbor, dest)) {
-      return true;
+    if (src === dest) return true;
+  
+    for (let neighbor of graph[src]) {
+      if (hasPath(graph, neighbor, dest)) {
+        return true;
+      }
     }
+  
+    return false;
   }
-
-  return false;
-}
 
 console.log(hasPath(graph, "f", "k"));
 console.log(hasPath(graph, "h", "k"));
