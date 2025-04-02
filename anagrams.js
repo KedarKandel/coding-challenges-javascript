@@ -15,6 +15,7 @@ function charMapFunc(str) {
 const isAnagrams = (strA, strB) => {
   const mapA = charMapFunc(strA);
   const mapB = charMapFunc(strB);
+  
 
   if (Object.keys(mapA).length !== Object.keys(mapB).length) return false;
   for (let key in mapA) {

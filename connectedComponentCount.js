@@ -13,7 +13,7 @@ function connectedComponentsCount(graph) {
   let count = 0;
 
   for (let node in graph) {
-    console.log(visited);
+
     if (explore(graph, node, visited) === true) {
       count += 1;
     }
