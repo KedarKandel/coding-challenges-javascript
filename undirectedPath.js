@@ -1,5 +1,5 @@
 const edges = [
-  ["i", "j"],
+ ["i" , "j"],
   ["k", "i"],
   ["m", "k"],
   ["k", "l"],
@@ -16,11 +16,11 @@ const buildGraph = (edges) => {
     obj[a].push(b);
     obj[b].push(a);
   }
-
+console.log(obj)
   return obj;
 };
 
-const underictedPath = (edges, nodeA, nodeB) => {
+const undirictedPath = (edges, nodeA, nodeB) => {
   const graph = buildGraph(edges);
   return hasPath(graph, nodeA, nodeB, new Set());
 };
@@ -39,4 +39,4 @@ const hasPath = (graph, src, dest, visited) => {
   return false;
 };
 
-console.log(underictedPath(edges, "j", "m")); //true
+console.log(undirictedPath(edges, "j", "m")); //true

@@ -32,6 +32,8 @@
 
 export const updateUserApi = async ({ username, password }) => {
   return new Promise((resolve, reject) => {
+    console.log(username)
+    console.log("first", password)
     if (username === "kedar" && password === "abc123") {
       resolve({
         success: true,
@@ -49,7 +51,7 @@ export const updateUserApi = async ({ username, password }) => {
   });
 };
 
-const updateUser = async ({ username, password }) => {
+const updateUser = async ( {username, password} ) => {
   try {
     const res = await updateUserApi({ username, password });
     console.log(res);
