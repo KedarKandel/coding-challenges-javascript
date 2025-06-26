@@ -1,4 +1,4 @@
-const { useState, useEffect } = require("react");
+import { useState, useEffect } from 'react';
 type dataType = {
   id: Number;
   name: String;
@@ -34,3 +34,7 @@ export const useApi = (endpoint: string) => {
 
   return { data, error, loading };
 };
+
+// use case
+// import { useApi } from './customHook';
+// const { data, error, loading } = useApi('https://api.example.com/data
